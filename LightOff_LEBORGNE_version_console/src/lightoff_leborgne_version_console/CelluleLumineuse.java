@@ -8,74 +8,81 @@ package lightoff_leborgne_version_console;
  *
  * @author bapti
  */
-class CelluleLumineuse {
+public class CelluleLumineuse {
 
     private boolean etat;
-/**
- *initialise l'etat en éteint 
- * @return renvoie éteint
- */
+
+    /**
+     * initialise l'etat en éteint
+     */
     public CelluleLumineuse() {
         etat = false;
     }
-/**
- *initialise en allumer
- * @return allumer
- */
-    
+
+    /**
+     * initialise en allumer
+     */
     public void allumer() {
         etat = true;
     }
-/**
- *initialise en éteint
- * @return: renvoie éteint 
- */
+
+    /**
+     * initialise en éteint
+     *
+     * @return: renvoie éteint
+     */
     public void eteindre() {
         etat = false;
     }
-/**
- * active la cellule lumineuse en inversant son etat 
- * @return: renvoie l'inverse de son etat 
- */
+
+    /**
+     * active la cellule lumineuse en inversant son etat
+     *
+     * @return: renvoie l'inverse de son etat
+     */
     public void activerCellule() {
         etat = !etat;
     }
-    
-/**
- * éteint la cellule 
- * @return: éteint 
- */
+
+    /**
+     * éteint la cellule
+     *
+     * @return: éteint
+     */
     public void eteindreCellule() {
         etat = false;
-        
+
     }
-    
+
     /**
- * vérifie si la cellule est actuellement éteint 
- * @return: renvoie l'inverse de son état 
- */
+     * vérifie si la cellule est actuellement éteint
+     *
+     * @return: renvoie l'inverse de son état
+     */
     public boolean estEteint() {
         return !etat;
     }
-/**
- * donne l'état actuel de la cellule 
- * @return état 
- */
+
+    /**
+     * donne l'état actuel de la cellule
+     *
+     * @return état
+     */
     public boolean getEtat() {
         return etat;
     }
-/**
- *donne comme valeur X si elle est allumé et O si elle est éteinte
- * @return X ou O suivant l'état de la cellule 
- */
+
+    /**
+     * donne comme valeur X si elle est allumé et O si elle est éteinte
+     *
+     * @return X ou O suivant l'état de la cellule
+     */
     @Override
     public String toString() {
-    if (etat) {
-        return "X";
-    } else {
-        return "O";
+        if (etat) {
+            return "X";
+        } else {
+            return "O";
+        }
     }
 }
-}
-
-
